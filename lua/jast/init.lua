@@ -1,5 +1,6 @@
 require("jast.set")
 require("jast.remap")
+require("jast.packer")
 
 local augroup = vim.api.nvim_create_augroup
 local jastGroup = augroup('jast', {})
