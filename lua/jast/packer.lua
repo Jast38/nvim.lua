@@ -75,6 +75,11 @@ return require('packer').startup(function(use)
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
   use("frazrepo/vim-rainbow")
+  use {'lervag/vimtex', ft = {'tex', 'latex'}}
+  use {
+    {'hoob3rt/lualine.nvim'},
+    {'akinsho/nvim-bufferline.lua'}
+  }
 
 end)
 

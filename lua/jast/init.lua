@@ -7,6 +7,7 @@ local jastGroup = augroup('jast', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
+local setIndent = augroup('setIndent', { clear = true })
 
 function R(name)
     require("plenary.reload").reload_module(name)
@@ -27,6 +28,13 @@ autocmd({"BufWritePre"}, {
     group = jastGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
+})
+
+autocmd('Filetype', {
+    desc = "format files according to standards using 2 spaces for tabs",
+    group = setIndent,
+    pattern = {'c', 'h', 'xml', 'css', 'javascript', 'typescript', 'yaml', 'lua'},
+    command = 'setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab=false'
 })
 
 vim.g.netrw_browse_split = 0

@@ -7,7 +7,9 @@ lsp.ensure_installed({
   'rust_analyzer',
   'pyright',
   'ltex',
-  'lua_ls'
+  'lua_ls',
+  'cmake',
+  'clangd'
 })
 
 -- Fix Undefined global 'vim'
