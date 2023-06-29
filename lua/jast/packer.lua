@@ -76,10 +76,8 @@ return require('packer').startup(function(use)
     use("laytan/cloak.nvim")
     use("frazrepo/vim-rainbow")
     use {'lervag/vimtex', ft = {'tex', 'latex'}}
-    use {
-      {'hoob3rt/lualine.nvim'},
-      {'akinsho/nvim-bufferline.lua'}
-    }
+    use {'hoob3rt/lualine.nvim'}
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
   end)
 
